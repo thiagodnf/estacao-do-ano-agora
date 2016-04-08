@@ -18,9 +18,31 @@ body{
 	background-color: rgba(0, 0, 0, 0.7);
 }
 
+#seasons_name{
+	font-family: 'Open Sans', "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-weight: bold;
+	text-shadow:
+	1px 1px 0 #000,
+	2px 2px 0 #000, /* end of 2 level deep grey shadow */
+	3px 3px 0 #000,
+	4px 4px 0 #000,
+	5px 5px 0 #000,
+	6px 6px 0 #000; /* end of 4 level deep dark shadow */
+}
+
 #loading{
 	margin-top: 20px;
 }
+
+.bold{
+	font-weight: bold;
+}
+
+.modal .modal-body {
+    /*max-height: 300px;*/
+    overflow-y: auto;
+}
+
 .img-season-fall{
 	background: url("../img/fall.jpg") no-repeat
 }

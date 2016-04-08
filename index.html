@@ -30,6 +30,7 @@
 		<meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
 		<meta name="theme-color" content="#000">
 
+		<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
 		<title>Estação do Ano no Brasil</title>
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/style.css">
@@ -51,11 +52,39 @@
 								<h1 id="seasons_name"></h1>
 							</div>
 						</div>
-						<p>Começou em <span id="start_date"></span>, ou seja,  <span id="diff_date"></span></p>
+						<div class="row">
+							<div class="col-md-12">
+								<p>Começou em <span id="start_date"></span>, ou seja,  <span id="diff_date"></span></p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<a class="btn" id="btn-see-more">Próximas Estações</a>
+							</div>
+						</div>
 					</div>
 				</div>
 			</center>
 		</div>
+
+		<div class="modal fade" id="modal-see-more" tabindex="-1" role="dialog" aria-labelledby="modal-change-location-label">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title" id="modal-change-location-label">Próximas Estações</h4>
+					</div>
+					<div class="modal-body">
+						<div id="the-next-seasons">
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
 		<script type="text/javascript" src="js/jquery.min.js"></script>
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="js/date.js"></script>
