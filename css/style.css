@@ -30,6 +30,10 @@ body{
 	6px 6px 0 #000; /* end of 4 level deep dark shadow */
 }
 
+html, body {
+    min-height: 100%;
+}
+
 #loading{
 	margin-top: 20px;
 }
@@ -44,17 +48,34 @@ body{
 }
 
 .img-season-fall{
-	background: url("../img/fall.jpg") no-repeat
+	background-image: url("../img/fall.jpg");
+	background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center top;
+    background-attachment: fixed;
 }
 
 .img-season-winter{
-	background: url("../img/winter.jpg") no-repeat
+	background: url("../img/winter.jpg");
+	background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center top;
+    background-attachment: fixed;
 }
 
 .img-season-spring{
-	background: url("../img/spring.jpg") no-repeat
+	background: url("../img/spring.jpg");
+	background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center top;
+    background-attachment: fixed;
 }
 
 .img-season-summer{
-	background: url("../img/summer.jpg") no-repeat
+	background: url("../img/summer.jpg");
+	background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center top;
+    background-attachment: fixed;
 }
+
