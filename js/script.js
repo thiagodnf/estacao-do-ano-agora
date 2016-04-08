@@ -1,9 +1,5 @@
 var season_now = null;
 
-var summer = [];
-var spring = [];
-var fall = [];
-var winter = [];
 var next_seasons = [];
 
 String.prototype.capitalizeFirstLetter = function() {
@@ -70,36 +66,21 @@ $(function(){
 				}else{
 					next_seasons.push(val);
 				}
-
-
-				if(val.season_name == "Outono"){
-					fall.push(val);
-				}else if(val.season_name == "Verão"){
-					summer.push(val);
-				}else if(val.season_name == "Primavera"){
-					spring.push(val);
-				}else if(val.season_name == "Inverno"){
-					winter.push(val);
-				}
 			});
 
 			// Order the seasons by date
 			next_seasons.sort(function(a, b) {
-			    a = new Date(a.start_date);
-			    b = new Date(b.start_date);
-			    return a>b ? 1 : a<b ? -1 : 0;
+                return Date.parse(a.start_date) - Date.parse(b.start_date);
 			});
-
+            
 			moment.locale("pt-br");
 
 			var str = "";
 
-			for(var i =0;i<4;i++){
+			for(var i = 0; i < 4; i++){
 				var date = moment(next_seasons[i].start_date);
 
-
 				str += "<div class='row'>";
-				//$("#the-next-seasons").append("<div class='col-xs-2 nopadding'>");
 
 				if(next_seasons[i].season_name == "Outono"){
 					str +="<div class='col-xs-2 nopadding'><img class='img-responsive' src='img/f_fall.png'></div>"
@@ -111,11 +92,9 @@ $(function(){
 					str +="<div class='col-xs-2 nopadding'><img class='img-responsive' src='img/f_winter.png'></div>"
 				}
 
-				//$("#the-next-seasons").append("</div>");
-
 				str +="<div class='col-xs-10 nopadding'>";
 				str +="<p class='bold'>"+next_seasons[i].season_name+"</p>";
-				str +="<p> Começa "+date.fromNow()+" na "+date.format('LLLL')+"</p>";
+				str +="<p>Começa "+date.fromNow()+" na "+date.format('LLLL')+"</p>";
 				str +="</div>";
 				str +="</div><br>";
 			}
