@@ -1,0 +1,38 @@
+body{
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	min-height: 100%;
+	padding-right: 0 !important;
+}
+
+#seasons_name{
+	font-size: 11vw;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+#content{
+	padding-top: 20px;
+	padding-bottom: 20px;
+	height: auto;
+	color: white;
+	background-color: rgba(0, 0, 0, 0.7);
+}
+
+#loading{
+	margin-top: 20px;
+}
+.img-season-fall{
+	background: url("../img/fall.jpg") no-repeat
+}
+
+.img-season-winter{
+	background: url("../img/winter.jpg") no-repeat
+}
+
+.img-season-spring{
+	background: url("../img/spring.jpg") no-repeat
+}
+
+.img-season-summer{
+	background: url("../img/summer.jpg") no-repeat
+}
