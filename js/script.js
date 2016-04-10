@@ -11,9 +11,11 @@ function resizeWindow(){
 	moment.locale("pt-br");
 
 	date = moment(season_now.start_date);
-
+	
+	var preposition = getPreposition(date);
+	
 	$("#seasons_name").text(season_now.season_name.toUpperCase())
-	$("#start_date").text(date.format('LLLL'))
+	$("#start_date").text(preposition+" "+date.format('LLLL'))
 	$("#diff_date").text(date.fromNow())
 
 	$("#content").removeClass("hide").fadeIn()
@@ -33,6 +35,16 @@ function resizeWindow(){
 	}else if(season_now.season_name == "Verão"){
 		$("body").addClass("img-season-summer");
 	}
+}
+
+function getPreposition(date){
+	var dayOfWeek = date.format('e');
+	
+	if(dayOfWeek == "0" || dayOfWeek == "6"){
+		return "no";
+	}
+	
+	return "na";
 }
 
 $(function(){
@@ -92,21 +104,17 @@ $(function(){
 					str +="<div class='col-xs-2 nopadding'><img class='img-responsive' src='img/f_winter.png'></div>"
 				}
 
+				var preposition = getPreposition(date);
+				
 				str +="<div class='col-xs-10 nopadding'>";
 				str +="<p class='bold'>"+next_seasons[i].season_name+"</p>";
-				str +="<p>Começa "+date.fromNow()+" na "+date.format('LLLL')+"</p>";
+				str +="<p>Começa "+date.fromNow()+" "+preposition+" "+date.format('LLLL')+"</p>";
 				str +="</div>";
 				str +="</div><br>";
 			}
 
 			$("#the-next-seasons").append(str);
 
-
-
-
-			// $.each( next_seasons, function( key, val ) {
-			// 	$("#the-next-seasons").append("<li>Em "+moment(val.start_date).fromNow()+" começa o "+val.season_name+"</li>")
-			// });
 
 			resizeWindow();
 		}
