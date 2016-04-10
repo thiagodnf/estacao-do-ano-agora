@@ -16,6 +16,12 @@ body{
 	height: auto;
 	color: white;
 	background-color: rgba(0, 0, 0, 0.7);
+	-webkit-border-radius: 5px;
+	-webkit-border-top-right-radius: 4px;
+	-moz-border-radius: 5px;
+	-moz-border-radius-topright: 4px;
+	border-radius: 5px;
+	border-top-right-radius: 4px;
 }
 
 #seasons_name{
