@@ -15,7 +15,7 @@ function resizeWindow(){
 	var preposition = getPreposition(date);
 	
 	$("#seasons_name").text(season_now.season_name.toUpperCase())
-	$("#start_date").text(preposition+" "+date.format('LLLL'))
+	$("#start_date").text(preposition+" "+date.format('LL'))
 	$("#diff_date").text(date.fromNow())
 
 	$("#content").removeClass("hide").fadeIn()
@@ -108,7 +108,7 @@ $(function(){
 				
 				str +="<div class='col-xs-10 nopadding'>";
 				str +="<p class='bold'>"+next_seasons[i].season_name+"</p>";
-				str +="<p>Começa "+date.fromNow()+" "+preposition+" "+date.format('LLLL')+"</p>";
+				str +="<p>Começa "+date.fromNow()+" "+preposition+" "+date.format('LL')+"</p>";
 				str +="</div>";
 				str +="</div><br>";
 			}
