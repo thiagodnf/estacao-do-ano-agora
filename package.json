@@ -1,23 +1,20 @@
 {
 	"name": "estacao-do-ano-agora",
-	"version": "1.0.0",
+	"version": "0.0.1",
 	"description": "Estacao do Ano Agora",
 	"main": "app.js",
 	"scripts": {
 		"start": "node app.js"
 	},
-	"engines": {
-		"node": ">=0.10.0"
-	},
 	"files": [
 		"app.js"
 	],
-	"author": "Thiago do Nascimento Ferreira",
+	"author": "Thiago Ferreira",
 	"license": "MIT",
 	"homepage": "http://thiagodnf.github.io/estacao-do-ano-agora",
 	"dependencies": {
-		"serve-static": "",
-		"connect": "",
-		"network":""
+		"serve-static": "1.15.0",
+		"connect": "3.7.0",
+		"network":"0.6.1"
   	}
 }
